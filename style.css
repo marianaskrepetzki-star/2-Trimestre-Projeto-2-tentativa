@@ -60,18 +60,13 @@ h1 {
     color: var(--primary-color);
 }
 
-..card {
+.card {
     background-color: var(--card-bg);
-    padding: 40px; /* Aumentei o espaçamento interno */
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px var(--card-shadow);
     margin-bottom: 30px;
-    
-    /* Altere estes valores para controlar o tamanho */
-    width: 100%;        /* Faz a caixa usar o espaço disponível */
-    max-width: 550px;   /* Define a largura máxima da caixa (aumente se quiser maior) */
-    min-height: 250px;  /* Aumentei a altura mínima de 150px para 250px */
-    
+    min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,10 +109,4 @@ button:active {
 #toggle-theme:hover {
     background-color: var(--primary-color);
     color: var(--button-text);
-}
-.minha-frase-colorida {
-    color: var(--primary-color); /* Ela vai herdar o verde-água do tema atual */
-}
-.minha-frase-colorida {
-    color: #818383; /* Aqui você coloca a cor que quiser (pode usar o nome em inglês como 'red', 'blue', ou o código HEX) */
 }
