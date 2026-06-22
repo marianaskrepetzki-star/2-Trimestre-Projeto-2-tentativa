@@ -60,13 +60,18 @@ h1 {
     color: var(--primary-color);
 }
 
-.card {
+..card {
     background-color: var(--card-bg);
-    padding: 30px;
+    padding: 40px; /* Aumentei o espaçamento interno */
     border-radius: 15px;
     box-shadow: 0 4px 15px var(--card-shadow);
     margin-bottom: 30px;
-    min-height: 150px;
+    
+    /* Altere estes valores para controlar o tamanho */
+    width: 100%;        /* Faz a caixa usar o espaço disponível */
+    max-width: 550px;   /* Define a largura máxima da caixa (aumente se quiser maior) */
+    min-height: 250px;  /* Aumentei a altura mínima de 150px para 250px */
+    
     display: flex;
     align-items: center;
     justify-content: center;
