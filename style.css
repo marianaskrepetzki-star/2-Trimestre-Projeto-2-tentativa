@@ -110,3 +110,9 @@ button:active {
     background-color: var(--primary-color);
     color: var(--button-text);
 }
+.minha-frase-colorida {
+    color: #727473; /* Aqui você coloca a cor que quiser (pode usar o nome em inglês como 'red', 'blue', ou o código HEX) */
+}
+.minha-frase-colorida {
+    color: var(--primary-color); /* Ela vai herdar o verde-água do tema atual */
+}
