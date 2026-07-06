@@ -1,23 +1,23 @@
-/* Definição das cores em variáveis para facilitar o Modo Escuro */
+/* Definição de variáveis para paleta de cores */
 :root {
-    --bg-color: #f8fafc;
+    --bg-color: #f7f9fc;
     --card-bg: #ffffff;
-    --text-color: #0f172a;
-    --primary-color: #134e4a; /* Verde-água escuro */
-    --primary-hover: #115e59;
-    --button-text: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
+    --text-color: #1e293b;
+    --primary-blue: #0f172a; /* Azul escuro sofisticado */
+    --accent-yellow: #facc15; /* Amarelo abelha vibrante */
+    --btn-bg: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.05);
 }
 
-/* Cores que vão mudar quando a classe .dark-mode estiver ativa */
-.dark-mode {
+/* Modificadores para o Tema Escuro */
+body.dark-mode {
     --bg-color: #0f172a;
     --card-bg: #1e293b;
     --text-color: #f8fafc;
-    --primary-color: #14b8a6; /* Verde-água mais aceso para contrastar no escuro */
-    --primary-hover: #0d9488;
-    --button-text: #0f172a;
-    --card-shadow: rgba(0, 0, 0, 0.4);
+    --primary-blue: #facc15; /* No tema escuro, o amarelo destaca os títulos */
+    --accent-yellow: #0f172a;
+    --btn-bg: #334155;
+    --shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -31,88 +31,86 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-}
-
-h1 {
-    margin-bottom: 30px;
-    color: var(--primary-color);
-}
-
-.card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px var(--card-shadow);
-    margin-bottom: 30px;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#fact-text {
-    font-size: 1.2rem;
     line-height: 1.6;
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--button-text);
+header {
+    background-color: #1e3a8a; /* Azul marinho para destaque fixo */
+    color: #facc15;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.theme-btn {
+    background-color: var(--primary-blue);
+    color: var(--bg-color);
     border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 6px var(--card-shadow);
-    transition: transform 0.1s, background-color 0.2s;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: var(--primary-hover);
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-button:active {
-    transform: scale(0.98);
+.info-section {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px var(--shadow);
+    border-left: 5px solid #facc15; /* Detalhe em amarelo na lateral */
 }
 
-/* Botão de alternar tema no topo */
-#toggle-theme {
-    background-color: transparent;
+.info-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Botões de Like e Dislike */
+.reactions {
+    display: flex;
+    gap: 15px;
+}
+
+.reactions button {
+    background-color: var(--btn-bg);
     color: var(--text-color);
-    border: 2px solid var(--primary-color);
-    box-shadow: none;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-#toggle-theme:hover {
-    background-color: var(--primary-color);
-    color: var(--button-text);
+.reactions button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
-.minha-frase-colorida {
-    color: #727473; /* Aqui você coloca a cor que quiser (pode usar o nome em inglês como 'red', 'blue', ou o código HEX) */
-}
-.minha-frase-colorida {
-    color: var(--primary-color); /* Ela vai herdar o verde-água do tema atual */
+
+.like-btn:active { background-color: #86efac; color: #14532d; }
+.dislike-btn:active { background-color: #fca5a5; color: #7f1d1d; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 40px;
 }
